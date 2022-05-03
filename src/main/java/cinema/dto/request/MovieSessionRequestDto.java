@@ -11,6 +11,12 @@ public class MovieSessionRequestDto {
     private Long cinemaHallId;
     @NotNull
     private LocalDateTime showTime;
+    @Positive
+    private int availableSeats;
+
+    public int getAvailableSeats() {
+        return availableSeats;
+    }
 
     public Long getMovieId() {
         return movieId;

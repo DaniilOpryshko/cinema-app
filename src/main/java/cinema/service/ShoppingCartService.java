@@ -5,7 +5,9 @@ import cinema.model.ShoppingCart;
 import cinema.model.User;
 
 public interface ShoppingCartService {
-    void addSession(MovieSession movieSession, User user);
+    String addSession(MovieSession movieSession, User user);
+
+    String removeSession(MovieSession movieSession, User user);
 
     ShoppingCart getByUser(User user);
 

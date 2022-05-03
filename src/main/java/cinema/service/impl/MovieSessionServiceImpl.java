@@ -22,6 +22,9 @@ public class MovieSessionServiceImpl implements MovieSessionService {
 
     @Override
     public MovieSession add(MovieSession session) {
+        if (session.getAvailableSeats() == 0) {
+            session.setAvailableSeats(session.getCinemaHall().getCapacity());
+        }
         return movieSessionDao.add(session);
     }
 

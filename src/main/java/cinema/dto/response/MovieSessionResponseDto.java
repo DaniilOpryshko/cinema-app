@@ -8,6 +8,15 @@ public class MovieSessionResponseDto {
     private String movieTitle;
     private Long cinemaHallId;
     private LocalDateTime showTime;
+    private int availableSeats;
+
+    public int getAvailableSeats() {
+        return availableSeats;
+    }
+
+    public void setAvailableSeats(int availableSeats) {
+        this.availableSeats = availableSeats;
+    }
 
     public Long getMovieSessionId() {
         return movieSessionId;
