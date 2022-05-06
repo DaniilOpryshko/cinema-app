@@ -24,6 +24,7 @@ public class MovieSessionMapper implements RequestDtoMapper<MovieSessionRequestD
         movieSession.setMovie(movieService.get(dto.getMovieId()));
         movieSession.setCinemaHall(cinemaHallService.get(dto.getCinemaHallId()));
         movieSession.setShowTime(dto.getShowTime());
+        movieSession.setAvailableSeats(dto.getAvailableSeats());
         return movieSession;
     }
 
@@ -35,6 +36,7 @@ public class MovieSessionMapper implements RequestDtoMapper<MovieSessionRequestD
         responseDto.setMovieId(movieSession.getMovie().getId());
         responseDto.setMovieTitle(movieSession.getMovie().getTitle());
         responseDto.setShowTime(movieSession.getShowTime());
+        responseDto.setAvailableSeats(movieSession.getAvailableSeats());
         return responseDto;
     }
 }
